@@ -10,18 +10,26 @@ module.exports = function() {
 */
 
 import React, {Component} from 'react';
+var Remarkable = require('remarkable');
+
 import config from './config.json';
 import styles from './Greeter.css';
+import { GroceryList } from './GroceryList'
 
 class Greeter extends Component { 
 	render() {
+		var md = new Remarkable();
+		var place = '世界和平!!';
 		return (
 			<div className={styles.root}>
 				<h1>react,react-dom,webpack,webpack-dev-server,babel组合测试</h1>
-				FROM json.config:{config.greetText}
+				<h3>FROM json.config:{config.greetText}</h3>
+				<h3>Hello, {place}</h3>
+				<GroceryList />
+				<span dangerouslySetInnerHTML={{__html:md.render( '# I should read the **whole** book' )}} />
 			</div>
 		);
 	}
 }
 
-export default Greeter
+export default Greeter;

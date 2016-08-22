@@ -9,12 +9,13 @@ module.exports = function() {
 };
 */
 
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 var Remarkable = require('remarkable');
 
 import config from './config.json';
 import styles from './Greeter.css';
 import { GroceryList } from './GroceryList'
+import FocusText from './FocusText';
 
 class Greeter extends Component { 
 	render() {
@@ -27,9 +28,18 @@ class Greeter extends Component {
 				<h3>Hello, {place}</h3>
 				<GroceryList />
 				<span dangerouslySetInnerHTML={{__html:md.render( '# I should read the **whole** book' )}} />
+				<hr />
+				<FocusText />
+				<h1>{this.props.salutation}</h1>
 			</div>
 		);
 	}
+}
+Greeter.propTypes = {
+	salutation: PropTypes.string.isRequired
+}
+Greeter.defaultProps = {
+	salutation: "Hello World"
 }
 
 export default Greeter;

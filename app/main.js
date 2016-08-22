@@ -8,4 +8,4 @@ import Greeter from './Greeter';
 
 import './main.css';
 
-render(<Greeter />, document.getElementById('root'));
+render(<Greeter salutation='您好@_@!' />, document.getElementById('root'));

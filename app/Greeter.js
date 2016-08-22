@@ -18,9 +18,14 @@ import { GroceryList } from './GroceryList'
 import FocusText from './FocusText';
 
 class Greeter extends Component { 
+	constructor() {
+		super();
+		this.name = 'ggggggggg';
+	}
+
 	render() {
 		var md = new Remarkable();
-		var place = '世界和平!!';
+		var place = '世界和平万岁!';
 		return (
 			<div className={styles.root}>
 				<h1>react,react-dom,webpack,webpack-dev-server,babel组合测试</h1>
@@ -31,6 +36,9 @@ class Greeter extends Component {
 				<hr />
 				<FocusText />
 				<h1>{this.props.salutation}</h1>
+				<h2>{(function(){return 123;})() }</h2>
+				<h2>{ (()=>789)() }</h2>
+				<h2>{ place + this.name } </h2>
 			</div>
 		);
 	}

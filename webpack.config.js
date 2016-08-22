@@ -47,7 +47,8 @@ module.exports = {
 		historyApiFallback: true,
 		inline: true,
 		hot: true,		// HotModuleReplacementPlugin
-		host: '192.168.5.110',
+		//host: '192.168.5.110',
+		host: 'userdeMacBook-Pro.local',
 		port: 8080
 	}
 }

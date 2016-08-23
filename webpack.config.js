@@ -48,7 +48,7 @@ module.exports = {
 		inline: true,
 		hot: true,		// HotModuleReplacementPlugin
 		//host: '192.168.5.110',
-		host: 'userdeMacBook-Pro.local',
+		host: 'ap-pc.local',
 		port: 8080
 	}
 }

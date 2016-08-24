@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack",
-    "server": "webpack-dev-server --progress",
+    "dev": "webpack-dev-server --progress",
     "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress",
     "build-server": "NODE_ENV=production webpack-dev-server --config ./webpack.production.config.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +33,7 @@
     "react": "^15.3.1",
     "react-addons-update": "^15.3.1",
     "react-dom": "^15.3.1",
+    "redux": "^3.5.2",
     "remarkable": "^1.6.2"
   }
 }
